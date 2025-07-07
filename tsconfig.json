@@ -14,7 +14,8 @@
     "noImplicitReturns": true,
     "noUnusedParameters": true,
     "skipLibCheck": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "declaration": true
   },
-  "include": ["src"]
+  "include": ["src/**/*"]
 }
