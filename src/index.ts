@@ -16,6 +16,20 @@ import passport, { StrategyFailure } from "passport";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// Successful CAS server response
+export interface CasAuthenticationSuccess<Attributes> {
+  user: string; // username
+  // user metadata
+  attributes: Attributes;
+}
+
+// Unsuccessful CAS server response
+interface CasAuthenticationFailure {
+  $?: {
+    code?: any; // error code
+  };
+}
+
 // User-provided hook on the authentication process
 export type VerifyCallback<Attributes> = (
   profile: CasAuthenticationSuccess<Attributes>,
@@ -36,20 +50,6 @@ export type VerifiedCallback = (
 interface CasServiceResponse<Attributes> {
   authenticationsuccess?: CasAuthenticationSuccess<Attributes>;
   authenticationfailure?: CasAuthenticationFailure;
-}
-
-// Successful CAS server response
-export interface CasAuthenticationSuccess<Attributes> {
-  user: string; // username
-  // user metadata
-  attributes: Attributes;
-}
-
-// Unsuccessful CAS server response
-interface CasAuthenticationFailure {
-  $?: {
-    code?: any; // error code
-  };
 }
 
 export interface CasOptions {

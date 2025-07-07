@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "author": "DataEnsta <data@ensta.fr> (https://www.data-ensta.fr)",
   "description": "CAS strategy for passport.js authentication",
-  "keywords": ["passport", "CAS"],
+  "keywords": [
+    "passport",
+    "CAS"
+  ],
   "homepage": "https://github.com/DataEnsta/passport-cas",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc"
   },
@@ -15,6 +19,7 @@
     "@types/passport": "^1.0.17",
     "@types/xml2js": "^0.4.14",
     "axios": "^1.10.0",
+    "passport": "^0.7.0",
     "xml2js": "^0.6.2"
   },
   "devDependencies": {
