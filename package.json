@@ -1,8 +1,9 @@
 {
-  "name": "passport-cas",
+  "name": "passport-cas-ts",
   "version": "1.0.0",
   "author": "DataEnsta <data@ensta.fr> (https://www.data-ensta.fr)",
   "description": "CAS strategy for passport.js authentication",
+  "license": "MIT",
   "keywords": [
     "passport",
     "CAS"
@@ -26,5 +27,5 @@
     "prettier": "^3.6.2",
     "typescript": "^5.5.3"
   },
-  "private": true
+  "private": false
 }
